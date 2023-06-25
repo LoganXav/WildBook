@@ -45,13 +45,13 @@ export const ArticlesList = ({ articles }) => {
             </Link>
             <div className="flex self-start gap-2">
               <span className="flex items-center justify-center bg-[#ececec] text-[#333333] hover:text-[#fff] hover:bg-[#d83860] transition duration-200 ease rounded-full p-3 cursor-pointer ">
-                <InstagramIcon style={{ fontSize: "16px" }} />
+                <InstagramIcon style={{ fontSize: "15px" }} />
               </span>
               <span className="flex items-center justify-center bg-[#ececec] text-[#333333] hover:text-[#fff] hover:bg-[#5a94ff] transition duration-200 ease rounded-full p-3 cursor-pointer ">
-                <TwitterIcon style={{ fontSize: "16px" }} />
+                <TwitterIcon style={{ fontSize: "15px" }} />
               </span>
               <span className="flex items-center justify-center bg-[#ececec] text-[#333333] hover:text-[#fff] hover:bg-[#2ed026] transition duration-200 ease rounded-full p-3 cursor-pointer ">
-                <WhatsAppIcon style={{ fontSize: "16px" }} />
+                <WhatsAppIcon style={{ fontSize: "15px" }} />
               </span>
             </div>
           </div>
