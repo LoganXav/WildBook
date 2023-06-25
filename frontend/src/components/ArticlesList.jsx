@@ -20,7 +20,7 @@ export const ArticlesList = ({ articles }) => {
             <Link to={`/article/${1}`}>
             <h2 className="text-4xl hover:text-[#767676] transition duration-200 ease">Memories From The Last Summer</h2>
             </Link>
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex text-[14px] italic items-center gap-3 mb-4">
               <p className="text-[#767676]">Posted on August 8, 2019</p>
               <span className="flex items-center justify-center">
                 <FiberManualRecordIcon
