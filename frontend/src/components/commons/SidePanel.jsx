@@ -67,7 +67,7 @@ const SidePanel = () => {
           searchOpen || authOpen ? "opacity-0 z-[-1]" : "opacity-1 z-[99]"
         } flex-col justify-between text-white transition duration-200 ease-in`}
       >
-        <div className="flex gap-3">
+        <div className="flex w-full justify-between">
           <div
             className="cursor-pointer w-fit h-fit"
             onClick={() => setSearchOpen(true)}
@@ -90,21 +90,21 @@ const SidePanel = () => {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
             facilis pariatur iure ullam, quisquam ipsa?
           </p>
-          <div className="flex items-center gap-1">
-            <span className="flex items-center justify-center border border-[#707070] hover:border-[#cacaca] transition duration-200 ease rounded-full p-4 cursor-pointer w-[2rem] h-[2rem]">
-              <InstagramIcon style={{ fontSize: "13px" }} />
+          <div className="flex items-center gap-2">
+            <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
+              <InstagramIcon style={{ fontSize: "15px" }} />
             </span>
-            <span className="flex items-center justify-center border border-[#707070] hover:border-[#cacaca] transition duration-200 ease rounded-full p-4 cursor-pointer w-[2rem] h-[2rem]">
-              <TwitterIcon style={{ fontSize: "13px" }} />
+            <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
+              <TwitterIcon style={{ fontSize: "15px" }} />
             </span>
-            <span className="flex items-center justify-center border border-[#707070] hover:border-[#cacaca] transition duration-200 ease rounded-full p-4 cursor-pointer w-[2rem] h-[2rem]">
-              <WhatsAppIcon style={{ fontSize: "13px" }} />
+            <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
+              <WhatsAppIcon style={{ fontSize: "15px" }} />
             </span>
-            <span className="flex items-center justify-center border border-[#707070] hover:border-[#cacaca] transition duration-200 ease rounded-full p-4 cursor-pointer w-[2rem] h-[2rem]">
-              <LinkedInIcon style={{ fontSize: "13px" }} />
+            <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
+              <LinkedInIcon style={{ fontSize: "15px" }} />
             </span>
-            <span className="flex items-center justify-center border border-[#707070] hover:border-[#cacaca] transition duration-200 ease rounded-full p-4 cursor-pointer w-[2rem] h-[2rem]">
-              <GitHubIcon style={{ fontSize: "13px" }} />
+            <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
+              <GitHubIcon style={{ fontSize: "15px" }} />
             </span>
           </div>
         </div>
