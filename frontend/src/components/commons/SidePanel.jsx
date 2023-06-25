@@ -36,7 +36,6 @@ const SidePanel = () => {
       setUsername("")
       setEmail("")
       setPassword("")
-      console.log("loading", res)
     } catch (err) {
       console.log(err)
     }
@@ -49,7 +48,6 @@ const SidePanel = () => {
         password: password2
       })
       setErrorMessage2(res.data.errors[0].msg)
-      console.log(res)
       setUsername2("")
       setPassword2("")
     } catch (err) {
@@ -88,7 +86,7 @@ const SidePanel = () => {
               src="http://nordthemes.com/wild-book-demo/wp-content/uploads/sites/14/2022/01/wildbooklogonew-21.png"
             />
           </Link>
-          <p className="text-[13px] max-w-[90%] md:max-w-[80%]">
+          <p className="text-[14px] max-w-[90%] md:max-w-[80%]">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
             facilis pariatur iure ullam, quisquam ipsa?
           </p>
@@ -110,7 +108,7 @@ const SidePanel = () => {
             </span>
           </div>
         </div>
-        <small className="self-center text-center text-[13px]">
+        <small className="self-center text-center text-[14px]">
           © 2020 — 2023 The Wild Book
         </small>
       </div>
@@ -147,9 +145,9 @@ const SidePanel = () => {
           onClick={() => setAuthOpen(false)}
           className="flex items-center justify-center self-end border border-[#cacaca] hover:border-[#e3e3e3] transition duration-200 ease rounded-full p-3 cursor-pointer w-[2rem] h-[2rem]"
         >
-          <CloseIcon style={{ fontSize: "16px", color: "#cacaca" }} />
+          <CloseIcon style={{ fontSize: "15px", color: "#cacaca" }} />
         </span>
-        <div className="w-full h-full flex justify-center items-center">
+        <div className="w-full h-full flex justify-center items-center mt-[-2rem]">
           <div className="flex flex-col gap-3 w-[70%]">
             <h3 className="font-medium">Create an account</h3>
             <div className="flex flex-col gap-3">
