@@ -40,7 +40,7 @@ export const ArticlesList = ({ articles }) => {
               <img src="http://nordthemes.com/wild-book-demo/wp-content/uploads/sites/14/2019/08/neonbrand-tokYjYqaPB0-unsplash-1-768x512.jpg" />
               <p>{text.split(". ").slice(3).join(". ")}</p>
             </div>
-            <Link to={`/article/${1}`} className="self-start italic cursor-pointer text-[#6074b5] hover:text-[#333333]">
+            <Link to={`/article/${1}`} className="self-start italic cursor-pointer text-[#6074b5] hover:text-[#333333] my-3">
               Continue reading →
             </Link>
             <div className="flex self-start gap-2">

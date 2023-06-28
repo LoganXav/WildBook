@@ -24,6 +24,7 @@ const Contact = () => {
                         <input className="border p-3 my-2 w-full md:w-[60%] text-xs outline-none focus-within:bg-white transition duration-200 ease bg-[#f6f6f6]" type='text' />
                         <label>Your Message</label>
                         <textarea className="border p-3 my-4 w-full md:w-[60%] h-[10rem] text-xs outline-none focus-within:bg-white transition duration-200 ease bg-[#f6f6f6]" />
+                        <button className="bg-[#edb48b] max-w-max py-2 px-7 text-white cursor-pointer">SEND</button>
                     </form>
                 </div>
             </div>
