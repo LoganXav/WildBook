@@ -6,9 +6,9 @@ export const Footer = () => {
   return (
     <footer className="">
       <section className="flex justify-center items-center border-b pb-16">
-        <div className="w-[80%] text-center flex flex-col items-center gap-4">
+        <div className="w-[80%] md:w-[70%] text-center flex flex-col items-center gap-4">
           <h3 className="text-xl font-semibold">Newsletter</h3>
-          <p>
+          <p className="text-[14.5px]">
           Subscribe to our email newsletter for a weekly look at the top stories in travel, design and photography.
           </p>
           <div className="flex flex-col md:flex-row gap-2 md:gap-1 w-full md:w-[90%]">
@@ -23,17 +23,17 @@ export const Footer = () => {
           <div className="flex flex-col gap-6 md:max-w-[50%]">
             <h3 className="font-semibold">About Blog</h3>
             <div className="flex flex-col gap-6">
-            <small className="text-[14px]">
+            <small className="text-[13px]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, harum
               quidem? Eligendi cumque quisquam natus ab omnis molestias alias Lorem ipsum dolor sit.
               ipsum accusamus.
             </small>
-            <small className="text-[14px]">
+            <small className="text-[13px]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, harum
               quidem? Eligendi cumque quisquam natus ab omnis molestias alias Lorem ipsum dolor sit.
               ipsum accusamus.
             </small>
-            <Link to="/author" className="text-[14px] italic text-[#6074b5] hover:text-[#767676]">More about me →</Link>
+            <Link to="/author" className="text-[13px] italic text-[#6074b5] hover:text-[#767676]">More about me →</Link>
             </div>
           </div>
           <div className="h-full flex flex-col gap-6">
@@ -48,10 +48,10 @@ export const Footer = () => {
                 />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <small className="text-[14px] max-w-[90%]">
+                  <small className="text-[13px] max-w-[90%]">
                     Lorem consectetur adipisicing elit Lorem, ipsum.
                   </small>
-                  <small className="font-light text-xs">August 8, 2019</small>
+                  <small className="font-light text-[10px]">August 8, 2019</small>
                 </div>
               </div>
             ))}

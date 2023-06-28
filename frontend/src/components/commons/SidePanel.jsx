@@ -86,7 +86,7 @@ const SidePanel = () => {
               src="http://nordthemes.com/wild-book-demo/wp-content/uploads/sites/14/2022/01/wildbooklogonew-21.png"
             />
           </Link>
-          <p className="text-[14px] max-w-[90%] md:max-w-[80%]">
+          <p className="text-[13px] max-w-[90%] md:max-w-[80%]">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
             facilis pariatur iure ullam, quisquam ipsa?
           </p>
@@ -108,7 +108,7 @@ const SidePanel = () => {
             </span>
           </div>
         </div>
-        <small className="self-center text-center text-[14px]">
+        <small className="self-center text-center text-[13px]">
           © 2020 — 2023 The Wild Book
         </small>
       </div>

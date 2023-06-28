@@ -10,7 +10,7 @@ const Article = () => {
     <>
       <Navbar />
       <main className="border-b mb-16">
-        <article className="w-[80%] mx-auto py-16">
+        <article className="w-[80%] md:w-[70%] mx-auto py-16">
           <PsychologyArticle />
         </article>
       </main>

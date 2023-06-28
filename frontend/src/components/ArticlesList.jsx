@@ -12,15 +12,15 @@ export const ArticlesList = ({ articles }) => {
     <>
       {articles.map((article, i) => (
         <div className="" key={i}>
-          <div className="text-center w-[80%] mx-auto flex flex-col items-center gap-4">
+          <div className="text-center w-[80%] md:w-[70%] mx-auto flex flex-col items-center gap-3">
             <h4 className="text-xs tracking-[3px]">INSPIRATION</h4>
             <div className="w-[5%] mx-auto">
               <hr />
             </div>
             <Link to={`/article/${1}`}>
-            <h2 className="text-4xl hover:text-[#767676] transition duration-200 ease">Memories From The Last Summer</h2>
+            <h2 className="text-[2.1rem] hover:text-[#767676] transition duration-200 ease">Memories From The Last Summer</h2>
             </Link>
-            <div className="flex text-[14px] italic items-center gap-3 mb-4">
+            <div className="flex text-[14px] italic items-center gap-3 mb-2">
               <p className="text-[#767676]">Posted on August 8, 2019</p>
               <span className="flex items-center justify-center">
                 <FiberManualRecordIcon
@@ -29,13 +29,13 @@ export const ArticlesList = ({ articles }) => {
               </span>
               <Link
                 to="/author"
-                className="text-[#767676] hover:text-black"
+                className="text-[#6074b5] hover:text-[#767676] "
               >
                 {" "}
                 by Logan Xavier
               </Link>
             </div>
-            <div className=" flex flex-col gap-8 text-left">
+            <div className=" flex flex-col gap-8 text-left text-[14.5px]">
               <p>{text.split(". ").slice(0, 3).join(". ") + "."}</p>
               <img src="http://nordthemes.com/wild-book-demo/wp-content/uploads/sites/14/2019/08/neonbrand-tokYjYqaPB0-unsplash-1-768x512.jpg" />
               <p>{text.split(". ").slice(3).join(". ")}</p>
