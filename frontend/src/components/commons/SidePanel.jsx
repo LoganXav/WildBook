@@ -124,11 +124,11 @@ const SidePanel = () => {
           <CloseIcon style={{ fontSize: "16px", color: "#cacaca" }} />
         </span>
         <div className="w-full h-full flex justify-center items-center">
-          <div className="border-b w-[90%] p-2 border-[#909090] self-center justify-between flex">
+          <div className="border-b w-[90%] md:w-[50%] lg:w-[90%] p-2 border-[#909090] self-center justify-between flex">
             <input
               type="text"
               placeholder="Type Keywords..."
-              className="border-0 text-[#cacaca] bg-transparent outline-none"
+              className="border-0 text-[#cacaca] bg-transparent outline-none w-full"
             />
             <SearchIcon
               style={{ fontSize: "22px", cursor: "pointer", color: "#cacaca" }}
@@ -143,11 +143,11 @@ const SidePanel = () => {
       >
         <span
           onClick={() => setAuthOpen(false)}
-          className="flex items-center justify-center self-end border border-[#cacaca] hover:border-[#e3e3e3] transition duration-200 ease rounded-full p-3 cursor-pointer w-[2rem] h-[2rem]"
+          className="static md:absolute lg:static flex items-center justify-center self-end border border-[#cacaca] hover:border-[#e3e3e3] transition duration-200 ease rounded-full p-3 cursor-pointer w-[2rem] h-[2rem]"
         >
           <CloseIcon style={{ fontSize: "15px", color: "#cacaca" }} />
         </span>
-        <div className="w-full h-[90%] flex justify-center items-center mt-[-2rem]">
+        <div className="w-full lg:w-full md:w-[70%] mx-auto h-[90%] flex justify-center items-center mt-[-2rem] md:mt-[-4rem]">
           <div className="flex flex-col gap-3 w-[70%]">
             <h3 className="font-medium">Create an account</h3>
             <div className="flex flex-col gap-3">
