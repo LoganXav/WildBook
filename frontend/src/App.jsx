@@ -10,8 +10,8 @@ import Article from "./pages/Article";
 function App() {
   const Layout = () => {                         
     return(
-            <div className="flex flex-col md:flex-row w-full">
-              <div className="flex-[2] md:sticky top-0 z-10 md:h-screen bg-homePanel bg-no-repeat bg-center bg-cover">
+            <div className="flex flex-col lg:flex-row w-full">
+              <div className="flex-[2] lg:sticky top-0 z-10 lg:h-screen bg-homePanel bg-no-repeat bg-center bg-cover">
               <SidePanel />
               </div>
               <div className= "flex-[3]">
