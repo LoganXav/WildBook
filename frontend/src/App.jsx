@@ -11,7 +11,7 @@ function App() {
   const Layout = () => {                         
     return(
             <div className="flex flex-col lg:flex-row w-full">
-              <div className="flex-[2] lg:sticky top-0 z-10 lg:h-screen bg-homePanel bg-no-repeat bg-center bg-cover">
+              <div className="lg:flex-[2] lg:sticky top-0 z-20 lg:h-screen bg-homePanel bg-no-repeat bg-center bg-cover">
               <SidePanel />
               </div>
               <div className= "flex-[3]">

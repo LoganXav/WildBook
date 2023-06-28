@@ -63,7 +63,7 @@ const SidePanel = () => {
       } relative`}
     >
       <div
-        className={`flex w-full h-full min-h-[60vh] ${
+        className={`flex w-full h-full min-h-[55vh] md:min-h-[40vh] ${
           searchOpen || authOpen ? "opacity-0 z-[-1]" : "opacity-1 z-[99]"
         } flex-col justify-between text-white transition duration-200 ease-in`}
       >
