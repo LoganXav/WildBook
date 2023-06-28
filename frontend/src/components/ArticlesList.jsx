@@ -35,7 +35,7 @@ export const ArticlesList = ({ articles }) => {
                 by Logan Xavier
               </Link>
             </div>
-            <div className=" flex flex-col gap-8 text-left text-[14.5px]">
+            <div className=" flex flex-col gap-8 text-left md:text-[14.5px]">
               <p>{text.split(". ").slice(0, 3).join(". ") + "."}</p>
               <img src="http://nordthemes.com/wild-book-demo/wp-content/uploads/sites/14/2019/08/neonbrand-tokYjYqaPB0-unsplash-1-768x512.jpg" />
               <p>{text.split(". ").slice(3).join(". ")}</p>

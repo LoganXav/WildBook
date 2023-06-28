@@ -12,8 +12,8 @@ export const PsychologyArticle = () => {
         <div className="w-[5%] mx-auto">
           <hr />
         </div>
-        <h2 className="text-[2.1rem]">Memories From The Last Summer</h2>
-        <div className="flex gap-3 text-[14px] italic mb-2">
+        <h2 className="text-4xl md:text-[2.1rem]">Memories From The Last Summer</h2>
+        <div className="flex gap-2 items-center text-[14px] italic mb-2">
           <p className="text-[#767676]">Posted on August 8, 2019</p>
           <span className="flex items-center justify-center">
             <FiberManualRecordIcon
@@ -24,12 +24,12 @@ export const PsychologyArticle = () => {
             by John Wood
           </Link>
         </div>
-        <div className="text-left flex flex-col gap-7  text-[14.5px]">
+        <div className="text-left flex flex-col gap-7  md:text-[14.5px]">
           <p>{text.split(". ").slice(0, 5).join(". ") + "."}</p>
           <img src="http://nordthemes.com/wild-book-demo/wp-content/uploads/sites/14/2019/08/neonbrand-tokYjYqaPB0-unsplash-1-768x512.jpg" />
           <p>{text.split(". ").slice(3).join(". ")}</p>
         </div>
-        <div className="text-left flex flex-col gap-7 mt-8 text-[14.5px]">
+        <div className="text-left flex flex-col gap-7 mt-8 md:text-[14.5px]">
           <h3 className="font-semibold text-xl">Beautiful Love</h3>
           <p>{text.split(". ").slice(0, 5).join(". ") + "."}</p>
           <img src="http://nordthemes.com/wild-book-demo/wp-content/uploads/sites/14/2019/08/neonbrand-tokYjYqaPB0-unsplash-1-768x512.jpg" />

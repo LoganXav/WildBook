@@ -9,7 +9,7 @@ const Author = () => {
     <>
       <Navbar />
       <div className="border-b flex justify-center items-center py-16 mb-16">
-        <div className="w-[60%] flex flex-col items-center text-center gap-6">
+        <div className="w-[80%] md:w-[60%] flex flex-col items-center text-center gap-6">
           <img className="rounded-full" src="http://0.gravatar.com/avatar/f44e7d18176511aed07496128445e855?s=150&d=mm&r=g" />
           <h2 className="font-semibold text-xl">Logan Xavier</h2>
           <p>
