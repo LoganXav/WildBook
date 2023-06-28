@@ -147,7 +147,7 @@ const SidePanel = () => {
         >
           <CloseIcon style={{ fontSize: "15px", color: "#cacaca" }} />
         </span>
-        <div className="w-full lg:w-full md:w-[70%] mx-auto h-[90%] flex justify-center items-center mt-[-2rem] md:mt-[-4rem]">
+        <div className="w-full lg:w-full md:w-[70%] mx-auto h-[90%] flex justify-center items-center mt-[-3rem] md:mt-[-4rem]">
           <div className="flex flex-col gap-3 w-[70%]">
             <h3 className="font-medium">Create an account</h3>
             <div className="flex flex-col gap-3">
