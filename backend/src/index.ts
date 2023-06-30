@@ -18,6 +18,17 @@ mongoose
     app.use(cookieParser());
     app.use(cors());
 
+    app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {            
+      const status = err.status || 500
+      const message = err.message || "Something went wrong!"
+      return res.status(status).json({
+          success: false, 
+          status,      // ES6 
+          message     // ES6 
+      })
+  })
+
+
     app.use("/api/auth", authRoutes);
 
     app.listen(8080, () => {
