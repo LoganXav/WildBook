@@ -17,13 +17,13 @@ const Plans = () => {
             </p>
           </div>
           <div className="flex flex-col md:flex-row gap-4">
-            <div className="border w-[100%] md:w-[50%] aspect-[3/1.8] text-[14px] md:text-[13px] flex flex-col items-center text-center justify-between p-4 hover:border-[black] transition duration-200 ease">
+            <div className="border w-[100%] md:w-[50%] aspect-[3/1.8] text-[14px] md:text-[13px] flex flex-col items-center text-center justify-between p-4 hover:border-[#edb48b] transition duration-200 ease">
                 <h3 className="font-semibold text-xl">Basic</h3>
                 <p><span className="line-through mr-2 text-[#767676]">NGN21,499</span>NGN16,999 per year</p>
                 <p className="text-[#53cd53]">(save NGN4, 499)</p>
                 <button className="bg-[#edb48b] text-[14px] md:text-[13px] rounded-full text-white py-3 px-8">Start free trial</button>
             </div>
-            <div className="border w-[100%] md:w-[50%] aspect-[3/1.8] text-[14px] md:text-[13px] flex flex-col items-center text-center justify-between p-4 hover:border-[black] transition duration-200 ease">
+            <div className="border w-[100%] md:w-[50%] aspect-[3/1.8] text-[14px] md:text-[13px] flex flex-col items-center text-center justify-between p-4 hover:border-[#edb48b] transition duration-200 ease">
                 <h3 className="font-semibold text-xl">Premium</h3>
                 <p><span className="line-through mr-2 text-[#767676]">NGN39,499</span>NGN30, 999 per year</p>
                 <p className="text-[#53cd53]">(save NGN8, 499)</p>
