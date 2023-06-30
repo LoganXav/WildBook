@@ -11,7 +11,7 @@ const Contact = () => {
                 <h2 className="self-center text-4xl">
                     Contact
                 </h2>
-                <p>To contact our support team leave a comment on this page or send to e-mail <a className="text-[#6074b5] cursor-pointer">sogbesansegun22@gmail.com</a>. You can also send a message using the feedback form below:</p>
+                <p>Is there a particular subject you'd like for me to write about? let me know at <a className="text-[#6074b5] cursor-pointer">sogbesansegun22@gmail.com</a>. You can also send a request using the feedback form below:</p>
                 <div className="flex flex-col gap-4">
                     <h3 className="font-semibold text-xl">Contact form</h3>
                     <p className="text-[14px] md:text-[13px] italic">Enter your name, e-mail, message and click Send Message</p>

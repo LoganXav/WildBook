@@ -18,12 +18,12 @@ const Search = () => {
           <div className="w-[70%] flex flex-col md:flex-row mx-auto gap-10 md:gap-6">
             <div className="flex flex-col gap-5">
               <h2 className="text-[2.1rem] hover:text-[#767676] transition duration-200 ease cursor-pointer">Finding Love and Romance on the Road</h2>
-              <div className="text-[14px] flex gap-2 items-center">
-                <small>Lifestyle</small>  <span className="flex items-center justify-center">
+              <div className="text-[14px] flex gap-2 items-center text-[#767676] italic">
+                <span>Lifestyle</span>  <span className="flex items-center justify-center">
                 <FiberManualRecordIcon
                   style={{ color: "#767676", fontSize: "5px" }}
                 />
-              </span><small> August 8, 2019</small>
+              </span><span> August 8, 2019</span>
               </div>
               <p className="md:text-[14.5px]">
                 A romantic journey is the best way to fill your relationship

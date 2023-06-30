@@ -5,13 +5,21 @@ import AcUnitIcon from "@mui/icons-material/AcUnit";
 export const Navbar = () => {
   return (
     <header className="sticky top-0 z-10 bg-white px-7 md:px-0 w-full">
-      <nav className="flex justify-center gap-16 border-b py-7">
+      <nav className="flex justify-center gap-8 md:gap-16 border-b py-7">
         <Link to="/">
           <div className="text-[11px] tracking-[.2rem] text-[#767676] hover:text-[#edb48b] uppercase flex gap-2 items-center transition duration-200 ease">
             <span className="mr-1 h-full flex justify-center items-center">
               <AcUnitIcon style={{ fontSize: "8px" }} />
             </span>
             <p>Home</p>
+          </div>
+        </Link>
+        <Link to="/plans">
+          <div className="text-[11px] tracking-[.2rem] text-[#767676] hover:text-[#edb48b] uppercase flex gap-2 items-center transition duration-200 ease">
+            <span className="mr-1 h-full flex justify-center items-center">
+              <AcUnitIcon style={{ fontSize: "8px" }} />
+            </span>
+            <p>Plans</p>
           </div>
         </Link>
         <Link to="/contact">

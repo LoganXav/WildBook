@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
 import SidePanel from "./components/commons/SidePanel";
 import HomePage from "./pages/HomePage";
 import Contact from "./pages/Contact";
+import Plans from "./pages/Plans";
 import Author from "./pages/Author";
 import Search from "./pages/Search";
 import Article from "./pages/Article";
@@ -35,6 +36,10 @@ function App() {
         {
           path: "/contact",
           element: <Contact />
+        },
+        {
+          path: "/plans",
+          element: <Plans />
         },
         {
           path: "/author",

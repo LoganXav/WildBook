@@ -48,7 +48,7 @@ export const Footer = () => {
                 />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <small className="text-text-[14px] md:text-[13px] max-w-[90%]">
+                  <small className="text-[14px] md:text-[13px] max-w-[90%]">
                     Lorem consectetur adipisicing elit Lorem, ipsum.
                   </small>
                   <small className="font-light text-[11px] md:text-[10px]">August 8, 2019</small>
