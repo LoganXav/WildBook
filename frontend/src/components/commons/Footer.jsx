@@ -14,7 +14,7 @@ export const Footer = () => {
           <div className="flex flex-col md:flex-row gap-2 md:gap-1 w-full md:w-[90%]">
             <input type="text" className="w-full border py-[10px] px-2 outline-none bg-[#f6f6f6] focus-within:bg-white transition duration-200 ease" placeholder="Your name" />
             <input type="text" className="w-full border py-[10px] px-2 outline-none bg-[#f6f6f6] focus-within:bg-white transition duration-200 ease" placeholder="Your email address" />
-            <button className="md:w-[50%] w-full border-none text-[12px] bg-[#edb48b] text-white px-2 py-[10px] cursor-pointer outline-none">SIGN UP</button>
+            <button className="md:w-[50%] w-full border-none bg-[#edb48b] text-white px-2 py-[10px] cursor-pointer outline-none">SIGN UP</button>
           </div>
         </div>
       </section>
