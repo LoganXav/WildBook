@@ -2,7 +2,6 @@ import express from "express";
 import User from "../models/User";
 import Article from "../models/Article";
 import ArticleCover from "../models/ArticleCover";
-import { verifyToken } from "../../verify";
 import { stripe } from "../utils/stripe";
 import jwt from "jsonwebtoken";
 

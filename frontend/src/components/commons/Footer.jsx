@@ -40,7 +40,7 @@ export const Footer = () => {
             <h3 className="font-semibold text-xl">Featured Posts</h3>
             <div className="flex flex-col gap-4">
             {posts.map((post, i) => (
-              <div key={i} className="flex gap-3 h-full">
+              <div key={i} className="flex gap-3 h-full items-center">
                 <div className="w-[4rem] h-full">
                 <img
                   className="w-full h-full object-cover object-center"

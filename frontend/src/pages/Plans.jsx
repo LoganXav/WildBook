@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Navbar } from "../components/commons/Navbar";
 import { Footer } from "../components/commons/Footer";
+import Skeleton from "../components/Skeleton";
 import { useFetch } from "../hooks/useFetch";
 import { makeRequest } from "../makeRequest";
 import { AuthContext } from "../context/authContext";
@@ -9,7 +10,15 @@ const Plans = () => {
   const { data, loading, error } = useFetch(
     import.meta.env.VITE_APP_API_URL + "/plans/prices"
   );
-  const { sub } = useContext(AuthContext);
+  const { userPlan, sub } = useContext(AuthContext);
+
+  useEffect(() => {
+    const fetchPlan = async () => {
+      await userPlan()
+    }
+    fetchPlan()
+  }, [])
+
 
   const createSession = async (planId) => {
     const { data: response } = await makeRequest.post(
@@ -39,48 +48,48 @@ const Plans = () => {
           </div>
           {sub === "Premium" ? <div></div> : sub === "Premium" ? <div
                     
-                      className="border w-[100%] md:w-[50%] aspect-[3/1.8] text-[14px] md:text-[13px] flex flex-col items-center text-center justify-between p-4 hover:border-[#edb48b] transition duration-200 ease"
+                      className="border w-[100%] md:w-[50%] aspect-[3/1.8] text-[14px] flex flex-col items-center text-center justify-between p-4 hover:border-[#edb48b] transition duration-200 ease"
                     >
                       <h3 className="font-semibold text-xl">Premium</h3>
                       <p>
-                        <span className="line-through mr-2 text-[#767676]">
+                        <span className="line-through mr-2 text-[#767676] italic">
                           NGN3000
                         </span>
                         NGN2500 per month
                       </p>
-                      <p className="text-[#53cd53]">
+                      <p className="text-[#53cd53] italic">
                         (save NGN500)
                       </p>
                       <button
                         onClick={() => createSession(plan.id)}
-                        className="bg-[#edb48b] text-[14px] md:text-[13px] rounded-full text-white py-3 px-8"
+                        className="bg-[#edb48b] text-[14px] rounded-full text-white py-3 px-8"
                       >
                         Upgrade to Premium
                       </button>
                     </div>  : <div className="flex flex-col md:flex-row gap-4">
             {loading
-              ? "loading..."
+              ? <Skeleton type="plan"/>
               : error
-              ? "Couldn't reach server."
+              ? "Couldn't reach server!"
               : data.map((plan, i) => (
                   
                     <div
                       key={i}
-                      className="border w-[100%] md:w-[50%] aspect-[3/1.8] text-[14px] md:text-[13px] flex flex-col items-center text-center justify-between p-4 hover:border-[#edb48b] transition duration-200 ease"
+                      className="border w-[100%] md:w-[50%] aspect-[3/1.8] text-[14px] flex flex-col items-center text-center justify-between p-4 hover:border-[#edb48b] transition duration-200 ease"
                     >
                       <h3 className="font-semibold text-xl">{plan.nickname}</h3>
                       <p>
-                        <span className="line-through mr-2 text-[#767676]">
+                        <span className="line-through mr-2 text-[#767676] italic">
                           NGN{0.012 * plan.unit_amount}
                         </span>
                         NGN{plan.unit_amount / 100} per month
                       </p>
-                      <p className="text-[#53cd53]">
-                        (save NGN{0.002 * plan.unit_amount})
+                      <p className="text-[#53cd53] italic">
+                        ( save NGN{0.002 * plan.unit_amount} )
                       </p>
                       <button
                         onClick={() => createSession(plan.id)}
-                        className="bg-[#edb48b] text-[14px] md:text-[13px] rounded-full text-white py-3 px-8"
+                        className="bg-[#edb48b] text-[14px] rounded-full text-white py-3 px-8"
                       >
                         Start free trial
                       </button>

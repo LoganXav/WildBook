@@ -116,6 +116,12 @@ router.get("/sub", verifyToken, async (req, res) => {
       }
     );
 
+    if (!subscriptions.data.length) {
+     
+        return res.json("");
+     
+    }
+
     //@ts-ignore
     const plan = subscriptions.data[0].plan.nickname;
     if (plan) return res.json(plan)
