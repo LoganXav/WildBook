@@ -39,7 +39,7 @@ const Plans = () => {
         <div className="flex flex-col w-[80%] gap-16 mx-auto">
           <div className="flex flex-col gap-4">
             <h3 className="text-3xl">
-              {sub === "Basic" ? "Upgrade to Premium membership" : sub === "Premium" ? "You are now a Premium member of The Wild Book!" : "Try Wild Book membership free for 1 month"}
+              {sub === "Basic" ? "Upgrade to Premium membership" : sub === "Premium" ? "You are now a Premium member of The Wild Book!" : "Try Wild Book's membership free for 1 month"}
             </h3>
             <p className="italic">
               *Note - A dummy debit card will be provided for all your
