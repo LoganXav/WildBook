@@ -3,7 +3,9 @@ import { body, validationResult } from "express-validator";
 import User from "../models/User";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import { stripe } from "../utils/stripe";
 import { verifyToken } from "../../verify";
+
 
 const router = express.Router();
 
@@ -28,8 +30,16 @@ router.post(
         return res.status(405).json("A user with this email already exists!");
       } else {
         const hash = await bcrypt.hash(req.body.password, 10);
-        const newUser = await User.create({ ...req.body, password: hash });
-        const token = jwt.sign({ id: newUser._id }, process.env.JWT as string, {
+
+        const customer = await stripe.customers.create(
+          {
+            email: req.body.email,
+          },
+          { apiKey: process.env.STRIPE_SECRET_KEY }
+        );
+
+        const newUser = await User.create({ ...req.body, password: hash, customerStripeId: customer.id });
+        const token = jwt.sign({ email: newUser.email }, process.env.JWT as string, {
           expiresIn: 360000,
         });
         const { password, ...data } = newUser.toObject();
@@ -40,7 +50,7 @@ router.post(
           })
           .status(200)
           .json({
-            data,
+            data, 
           });
       }
     } catch (err) {
@@ -60,7 +70,7 @@ router.post("/signin", async (req, res) => {
 
     const isCorrect = bcrypt.compareSync(req.body.password, user.password);
     if (isCorrect) {
-      const token = jwt.sign({ id: user._id }, process.env.JWT as string, {
+      const token = jwt.sign({ email: user.email }, process.env.JWT as string, {
         expiresIn: 360000,
       });
       const { password, ...data } = user.toObject();
@@ -84,17 +94,34 @@ router.post("/signin", async (req, res) => {
 
 router.post("/logout", (req, res) => {
   res
-    .clearCookie("access_token", {
-      secure: true,
-      sameSite: "none",
-    })
+    .clearCookie("access_token", 
+      // secure: true,
+      // sameSite: "none",
+    )
     .status(200)
     .json("User has been logged out.");
 });
 
-router.get("/me", verifyToken, async (req, res) => {
-  res.send("me route")
-})
+router.get("/sub", verifyToken, async (req, res) => {
+  try {
+    const user = await User.findOne({ email: req.body.user });
+    const subscriptions = await stripe.subscriptions.list(
+      {
+        customer: user?.customerStripeId,
+        status: "all",
+        expand: ["data.default_payment_method"],
+      },
+      {
+        apiKey: process.env.STRIPE_SECRET_KEY,
+      }
+    );
 
+    //@ts-ignore
+    const plan = subscriptions.data[0].plan.nickname;
+    if (plan) return res.json(plan)
+  } catch (err) {
+    console.log(err)
+  }
+});
 
 export default router;

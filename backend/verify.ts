@@ -13,9 +13,11 @@ export const verifyToken = async (
       email: string;
     };
     req.body.user = user.email;
+
     next();
   } catch (err) {
     return res.status(403).json("Token is not valid!");
     console.log(err);
   }
+
 };

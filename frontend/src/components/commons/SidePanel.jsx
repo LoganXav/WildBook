@@ -23,17 +23,21 @@ const SidePanel = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [errorMessage2, setErrorMessage2] = useState("");
 
+  const [loading, setLoading] = useState(false)
+
   const navigate = useNavigate()
 
   const { currentUser, signin, signup, logout } = useContext(AuthContext);
 
   const handleRegister = async () => {
     try {
+      setLoading(true)
       await signup({
         username,
         email,
         password,
       });
+      setLoading(false)
       setUsername("");
       setEmail("");
       setPassword("");
@@ -41,22 +45,26 @@ const SidePanel = () => {
       setAuthOpen(false);
       navigate("/plans")
     } catch (err) {
+      setLoading(false)
       setErrorMessage(err.response.data);
     }
   };
-
+  
   const handleLogin = async () => {
     try {
+      setLoading(true)
       await signin({
         username2,
         password2,
       });
       setUsername2("");
+      setLoading(false)
       setPassword2("");
       setErrorMessage2("");
       setAuthOpen(false);
       navigate("/plans")
     } catch (err) {
+      setLoading(false)
       setErrorMessage2(err.response.data);
     }
   };
@@ -112,31 +120,31 @@ const SidePanel = () => {
               src="http://nordthemes.com/wild-book-demo/wp-content/uploads/sites/14/2022/01/wildbooklogonew-21.png"
             />
           </Link>
-          <p className="text-[14px] md:text-[13px] max-w-[90%] md:max-w-[80%]">
+          <p className="max-w-[90%] md:max-w-[80%]">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
             facilis pariatur iure ullam, quisquam ipsa?
           </p>
           <div className="flex items-center gap-2">
             <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
-              <InstagramIcon style={{ fontSize: "15px" }} />
+              <InstagramIcon style={{ fontSize: "16px" }} />
             </span>
             <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
-              <TwitterIcon style={{ fontSize: "15px" }} />
+              <TwitterIcon style={{ fontSize: "16px" }} />
             </span>
             <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
-              <WhatsAppIcon style={{ fontSize: "15px" }} />
+              <WhatsAppIcon style={{ fontSize: "16px" }} />
             </span>
             <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
-              <LinkedInIcon style={{ fontSize: "15px" }} />
+              <LinkedInIcon style={{ fontSize: "16px" }} />
             </span>
             <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
-              <GitHubIcon style={{ fontSize: "15px" }} />
+              <GitHubIcon style={{ fontSize: "16px" }} />
             </span>
           </div>
         </div>
-        <small className="self-center text-center text-[14px] md:text-[13px]">
+        <p className="self-center text-center">
           © 2020 — 2023 The Wild Book
-        </small>
+        </p>
       </div>
       <div
         className={`absolute ${
@@ -201,9 +209,9 @@ const SidePanel = () => {
               <div className="flex gap-3 w-full justify-between">
                 <button
                   onClick={handleRegister}
-                  className="border border-[#909090] px-2 py-1 text-[12px] hover:border-[#e3e3e3] transition duration-200 ease"
+                  className=" border border-[#909090] w-[5rem] px-2 py-1 text-[12px] hover:border-[#e3e3e3] transition duration-200 ease"
                 >
-                  REGISTER
+                  {loading ? "..." : "REGISTER"}
                 </button>
                 <small className="text-[#909090] text-[12px]">
                   {errorMessage}
@@ -229,9 +237,9 @@ const SidePanel = () => {
               <div className="flex gap-3 w-full justify-between">
                 <button
                   onClick={handleLogin}
-                  className="border border-[#909090] px-2 py-1 text-[12px] hover:border-[#e3e3e3] transition duration-200 ease"
+                  className="border border-[#909090] w-[5rem] px-2 py-1 text-[12px] hover:border-[#e3e3e3] transition duration-200 ease"
                 >
-                  LOGIN
+                  {loading ? "..." : "LOGIN"}
                 </button>
                 <small className="text-[#909090] text-[12px]">
                   {errorMessage2}

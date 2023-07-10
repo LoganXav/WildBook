@@ -19,6 +19,10 @@ const UserSchema = new mongoose.Schema({
     img: {
         type: String
     },
+    customerStripeId: {
+        type: String,
+        required: true
+    }
 }
 )
 
