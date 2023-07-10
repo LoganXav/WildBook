@@ -26,7 +26,7 @@ export const ArticlesList = () => {
    return (
     <>
     {
-      loading ? (<Skeleton type="articleList" /> ) : error ? <div className="my-16">Something went wrong!</div> : (
+      loading ? (<Skeleton type="articleList" /> ) : error ? <div className="border-b py-16 w-[80%] md:w-[70%] mx-auto">Couldn't reach server!</div> : (
        data.map((article) => (
         <div className="" key={article._id}>
           <div className="text-center w-[80%] md:w-[70%] mx-auto flex flex-col items-center gap-3">
@@ -92,6 +92,6 @@ export const ArticlesList = () => {
           <hr className="my-14" />
         </div>)
       ))} 
-}    </>
+    </>
   );
 };
