@@ -8,13 +8,13 @@ export const Footer = () => {
       <section className="flex justify-center items-center border-b pb-16">
         <div className="w-[80%] md:w-[70%] text-center flex flex-col items-center gap-4">
           <h3 className="text-xl font-semibold">Newsletter</h3>
-          <p className="">
+          <p className="text-[14px]">
           Subscribe to our email newsletter for a weekly look at the top stories in travel, design and photography.
           </p>
           <div className="flex flex-col md:flex-row gap-2 md:gap-1 w-full md:w-[90%]">
-            <input type="text" className="w-full border py-[10px] px-2 outline-none bg-[#f6f6f6] focus-within:bg-white transition duration-200 ease" placeholder="Your name" />
-            <input type="text" className="w-full border py-[10px] px-2 outline-none bg-[#f6f6f6] focus-within:bg-white transition duration-200 ease" placeholder="Your email address" />
-            <button className="md:w-[50%] w-full border-none bg-[#edb48b] text-white px-2 py-[10px] cursor-pointer outline-none">SIGN UP</button>
+            <input type="text" className="w-full text-[14px] border py-[10px] px-2 outline-none bg-[#f6f6f6] focus-within:bg-white transition duration-200 ease" placeholder="Your name" />
+            <input type="text" className="w-full text-[14px] border py-[10px] px-2 outline-none bg-[#f6f6f6] focus-within:bg-white transition duration-200 ease" placeholder="Your email address" />
+            <button className="md:w-[50%] w-full text-[14px] border-none bg-[#edb48b] text-white px-2 py-[10px] cursor-pointer outline-none">SIGN UP</button>
           </div>
         </div>
       </section>
@@ -22,7 +22,7 @@ export const Footer = () => {
         <div className="h-full flex flex-col md:flex-row w-[75%] gap-7">
           <div className="flex flex-col gap-6 md:max-w-[50%]">
             <h3 className="font-semibold text-xl">About Blog</h3>
-            <div className="flex flex-col gap-6 text-[14px]">
+            <div className="flex flex-col gap-6 text-xs ">
               <p className="">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, harum
                 quidem? Eligendi cumque quisquam natus ab omnis molestias alias Lorem ipsum dolor sit.
@@ -48,10 +48,10 @@ export const Footer = () => {
                 />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <small className="text-[14px] max-w-[90%]">
+                  <small className="text-xs max-w-[90%]">
                     Lorem consectetur adipisicing elit Lorem, ipsum.
                   </small>
-                  <small className="font-light text-[11px]">August 8, 2019</small>
+                  <small className="font-extralight text-[11px]">August 8, 2019</small>
                 </div>
               </div>
             ))}

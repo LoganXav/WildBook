@@ -18,6 +18,20 @@ router.get("/covers", async (req, res) => {
   }
 });
 
+router.post("/suggestions", async (req, res) => {
+  const articleCategory = req.body.category;
+  const articleTitle = req.body.title;
+  try { 
+    const suggestions = await Article.find({
+      category: articleCategory,
+      title: { $ne: articleTitle }
+    });
+    res.status(200).json(suggestions);
+  } catch (err) {
+    console.log(err);
+  }
+});
+
 router.post("/singleArticle", async (req, res) => {
 
   // const token = req?.cookies?.access_token;

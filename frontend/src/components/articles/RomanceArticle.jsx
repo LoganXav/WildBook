@@ -4,18 +4,20 @@ import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { Comment } from "../Comment";
+import { Suggestion } from "../Suggestion";
 
 export const RomanceArticle = ({ data }) => {
   return (
-    <div className="">
-      <div className="text-center w-full mx-auto flex flex-col items-center gap-3">
+    <div className="w-full">
+      <div className="text-center w-[80%] md:w-[70%] mx-auto flex flex-col items-center gap-3">
         <h4 className="text-xs tracking-[3px] uppercase">{data.category}</h4>
         <div className="w-[5%] mx-auto">
           <hr />
         </div>
         <h2 className="text-4xl">{data.title}</h2>
         <div className="flex gap-2 items-center italic mb-2">
-          <p className="text-[#767676]">Posted on {data.date}</p>
+          <p className="lg:text-xs text-[#767676]">Posted on {data.date}</p>
           <span className="flex items-center justify-center">
             <FiberManualRecordIcon
               style={{ color: "#767676", fontSize: "5px" }}
@@ -44,9 +46,7 @@ export const RomanceArticle = ({ data }) => {
             <p>{data.quote}</p>
             <cite>- {data.quotedPerson}</cite>
           </blockquote> */}
-          <blockquote className="blockquote italic">
-           {data.quote}
-          </blockquote>
+          <blockquote className="blockquote italic">{data.quote}</blockquote>
 
           <p>{data.mainContent[1].split(". ").slice(4, 12).join(". ")}</p>
           <img src={data.articleImageUrl[1]} />
@@ -68,6 +68,12 @@ export const RomanceArticle = ({ data }) => {
           <span className="flex text-[#333333] items-center justify-center bg-[#ececec] hover:text-[#fff] hover:bg-[#2ed026] transition duration-200 ease rounded-full p-3 cursor-pointer ">
             <WhatsAppIcon style={{ fontSize: "15px" }} />
           </span>
+        </div>
+      </div>
+      <Suggestion category={data.category} title={data.title} /> 
+      <div className="w-full border-t mt-16 pt-16">
+        <div className="w-[80%] md:w-[70%] mx-auto">
+          <Comment />
         </div>
       </div>
     </div>

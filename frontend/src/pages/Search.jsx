@@ -10,22 +10,22 @@ const Search = () => {
       <Navbar />
       <section className="border-b flex justify-center items-center py-16">
         <div className="w-[80%] md:w-[60%] flex flex-col items-center text-center gap-6">
-          <h2 className="text-2xl">Search Results for: "love"</h2>
+          <h2 className="text-xl">Search Results for: "love"</h2>
         </div>
       </section>
       {searchResults.map((result) => (
         <section className="border-b py-16 mb-16">
           <div className="w-[70%] flex flex-col md:flex-row mx-auto gap-10 md:gap-6">
             <div className="flex flex-col gap-5">
-              <h2 className="text-[2.1rem] hover:text-[#767676] transition duration-200 ease cursor-pointer">Finding Love and Romance on the Road</h2>
-              <div className="text-[14px] flex gap-2 items-center text-[#767676] italic">
+              <h2 className="text-3xl hover:text-[#767676] transition duration-200 ease cursor-pointer">Finding Love and Romance on the Road</h2>
+              <div className="text-xs flex gap-2 items-center text-[#767676] italic">
                 <span>Lifestyle</span>  <span className="flex items-center justify-center">
                 <FiberManualRecordIcon
                   style={{ color: "#767676", fontSize: "5px" }}
                 />
               </span><span> August 8, 2019</span>
               </div>
-              <p className="md:text-[14.5px]">
+              <p className="lg:text-sm">
                 A romantic journey is the best way to fill your relationship
                 with a loved one with new feelings and vivid emotions. This
                 journey will leave…

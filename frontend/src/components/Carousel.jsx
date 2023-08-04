@@ -19,12 +19,12 @@ export const Carousel = () => {
       >
         {sliderData.map((slide, i) => (
           <SwiperSlide key={i} className="swiper-slide h-[25rem] ">
-            <div className="h-full w-full bg-homePanel bg-no-repeat bg-center bg-cover cursor-pointer p-8">
+            <div className="h-full w-full bg-homePanel bg-no-repeat bg-center bg-cover cursor-pointer">
               <div className="h-full w-full text-center flex flex-col items-center justify-center gap-5 bg-[#0000003e] text-white backdrop-blur-[1px]">
-                <h2 className="text-3xl max-w-[25rem]">
+                <h2 className="text-2xl max-w-[25rem]">
                   Lorem ipsum dolor sit amet.
                 </h2>
-                <p className="max-w-[20rem] md:max-w-[25rem] italic">
+                <p className="max-w-[20rem] md:max-w-[25rem] italic text-sm">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic,
                   impedit odio repudiandae quas pariatur soluta!
                 </p>

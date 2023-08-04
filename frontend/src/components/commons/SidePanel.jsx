@@ -91,7 +91,7 @@ const SidePanel = () => {
       } relative`}
     >
       <div
-        className={`flex w-full h-full min-h-[55vh] md:min-h-[40vh] ${
+        className={`flex w-full h-full min-h-[55vh] md:min-h-[55vh] ${
           searchOpen || authOpen ? "opacity-0 z-[-1]" : "opacity-1 z-[99]"
         } flex-col justify-between text-white transition duration-200 ease-in`}
       >
@@ -120,29 +120,29 @@ const SidePanel = () => {
               src="http://nordthemes.com/wild-book-demo/wp-content/uploads/sites/14/2022/01/wildbooklogonew-21.png"
             />
           </Link>
-          <p className="max-w-[90%] md:max-w-[80%]">
+          <p className="lg:text-xs max-w-[90%] md:max-w-[80%]">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
             facilis pariatur iure ullam, quisquam ipsa?
           </p>
           <div className="flex items-center gap-2">
             <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
-              <InstagramIcon style={{ fontSize: "16px" }} />
+              <InstagramIcon style={{ fontSize: "15px" }} />
             </span>
             <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
-              <TwitterIcon style={{ fontSize: "16px" }} />
+              <TwitterIcon style={{ fontSize: "15px" }} />
             </span>
             <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
-              <WhatsAppIcon style={{ fontSize: "16px" }} />
+              <WhatsAppIcon style={{ fontSize: "15px" }} />
             </span>
             <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
-              <LinkedInIcon style={{ fontSize: "16px" }} />
+              <LinkedInIcon style={{ fontSize: "15px" }} />
             </span>
             <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
-              <GitHubIcon style={{ fontSize: "16px" }} />
+              <GitHubIcon style={{ fontSize: "15px" }} />
             </span>
           </div>
         </div>
-        <p className="self-center text-center">
+        <p className="lg:text-xs self-center text-center">
           © 2020 — 2023 The Wild Book
         </p>
       </div>

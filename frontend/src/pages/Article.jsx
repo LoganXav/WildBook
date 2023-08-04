@@ -16,7 +16,6 @@ const Article = () => {
     import.meta.env.VITE_APP_API_URL + "/articles/singleArticle",
     {
       articleId,
-      
     }
   );
   return (
@@ -24,13 +23,13 @@ const Article = () => {
       <Navbar />
       {data.category === "Psychology" ? (
         <main className="border-b mb-16">
-          <article className="w-[80%] md:w-[70%] mx-auto py-16">
+          <article className="w-full py-16">
             <PsychologyArticle data={data}/>
           </article>
         </main>
       ) : data.category === "Romance" ? (
         <main className="border-b mb-16">
-          <article className="w-[80%] mx-auto py-16">
+          <article className="w-full mx-auto py-16">
             <RomanceArticle data={data}/>
           </article>
         </main>

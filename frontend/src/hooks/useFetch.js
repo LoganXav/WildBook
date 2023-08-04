@@ -24,6 +24,28 @@ export const useFetch = (url) => {
 
   return { data, loading, error };
 };
+export const useFetchSuggestions = (url, { category, title }) => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const res = await makeRequest.post(url, {category, title}, { withCredentials: true });
+        setData(res.data);
+      } catch (err) {
+        console.log(err);
+        setError(true);
+      }
+      setLoading(false);
+    };
+    fetchData();
+  }, [url]);
+
+  return { data, loading, error };
+};
 
 export const useFetchArticleCovers = (url) => {
   const [data, setData] = useState([]);

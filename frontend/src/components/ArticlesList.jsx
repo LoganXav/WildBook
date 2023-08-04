@@ -37,11 +37,11 @@ export const ArticlesList = () => {
               <hr />
             </div>
             <Link to={`/article/${article._id}`}>
-              <h2 className="text-4xl hover:text-[#767676] transition duration-200 ease">
+              <h2 className="text-3xl hover:text-[#767676] transition duration-200 ease">
                 {article.title}
               </h2>
             </Link>
-            <div className="flex italic items-center gap-3 mb-2 text-[14px] md:text-base">
+            <div className="flex italic items-center gap-3 mb-2 lg:text-xs">
               <p className="text-[#767676]">Posted on {article.date}</p>
               <span className="flex items-center justify-center">
                 <FiberManualRecordIcon
@@ -56,19 +56,19 @@ export const ArticlesList = () => {
                 by Logan Xavier
               </Link>
             </div>
-            <div className=" flex flex-col gap-8 text-left">
+            <div className="lg:text-sm flex flex-col gap-8 text-left">
               <p>
                 {article.coverContent.split(". ").slice(0, 3).join(". ") + "."}
               </p>
               <img
-                className="w-full aspect-[1/0.8] object-center object-cover "
+                className="w-full aspect-[1/0.6] object-center object-cover "
                 src={article.coverImageUrl}
               />
               <p>{article.coverContent.split(". ").slice(3).join(". ")}</p>
             </div>
             <Link
               to={`/article/${article._id}`}
-              className="self-start italic cursor-pointer text-[#6074b5] hover:text-[#333333] my-3"
+              className="text-sm self-start italic cursor-pointer text-[#6074b5] hover:text-[#333333] my-1"
             >
               Continue reading →
             </Link>

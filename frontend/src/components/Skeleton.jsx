@@ -9,7 +9,7 @@ export default function Skeleton ({ type }) {
             <div className=" bg-[lightgray] h-[.5rem] w-[8rem] rounded-full"></div>
             <div className=" bg-[lightgray] h-[.5rem] w-[8rem] rounded-full"></div>
         </div>
-        <div className=" bg-[lightgray] w-full h-[25rem] rounded-[2%]"></div>
+        <div className=" bg-[lightgray] w-full h-[25rem]"></div>
         <div className=" bg-[lightgray] w-1/3 h-[.5rem] self-start rounded-full"></div>
         <div className="flex items-center self-start gap-3">
             <div className="rounded-full w-[3rem] h-[3rem] bg-[lightgray]"></div>
