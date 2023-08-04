@@ -22,7 +22,7 @@ export const Footer = () => {
         <div className="h-full flex flex-col md:flex-row w-[75%] gap-7">
           <div className="flex flex-col gap-6 md:max-w-[50%]">
             <h3 className="font-semibold text-xl">About Blog</h3>
-            <div className="flex flex-col gap-6 text-xs ">
+            <div className="flex flex-col gap-6 lg:text-xs text-sm ">
               <p className="">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, harum
                 quidem? Eligendi cumque quisquam natus ab omnis molestias alias Lorem ipsum dolor sit.
@@ -48,7 +48,7 @@ export const Footer = () => {
                 />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <small className="text-xs max-w-[90%]">
+                  <small className="lg:text-xs text-sm max-w-[90%]">
                     Lorem consectetur adipisicing elit Lorem, ipsum.
                   </small>
                   <small className="font-extralight text-[11px]">August 8, 2019</small>
