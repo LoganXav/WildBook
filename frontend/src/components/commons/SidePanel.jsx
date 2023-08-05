@@ -10,6 +10,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import CloseIcon from "@mui/icons-material/Close";
 import { AuthContext } from "../../context/authContext";
+import  logo  from "../../assets/logo.png"
 
 const SidePanel = () => {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -117,7 +118,7 @@ const SidePanel = () => {
           <Link to="/">
             <img
               className="w-[80%] mx-auto"
-              src="http://nordthemes.com/wild-book-demo/wp-content/uploads/sites/14/2022/01/wildbooklogonew-21.png"
+              src={logo}
             />
           </Link>
           <p className="lg:text-xs max-w-[90%] md:max-w-[80%]">
