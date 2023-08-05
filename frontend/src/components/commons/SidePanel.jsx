@@ -121,7 +121,7 @@ const SidePanel = () => {
               src={logo}
             />
           </Link>
-          <p className="lg:text-xs max-w-[90%] md:max-w-[80%]">
+          <p className="sm:text-xs max-w-[90%] md:max-w-[80%]">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
             facilis pariatur iure ullam, quisquam ipsa?
           </p>
@@ -143,7 +143,7 @@ const SidePanel = () => {
             </span>
           </div>
         </div>
-        <p className="lg:text-xs self-center text-center">
+        <p className="sm:text-xs self-center text-center">
           © 2020 — 2023 The Wild Book
         </p>
       </div>

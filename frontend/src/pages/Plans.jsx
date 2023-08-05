@@ -41,7 +41,7 @@ const Plans = () => {
             <h3 className="text-3xl">
               {sub === "Basic" ? "Upgrade to Premium membership" : sub === "Premium" ? "You are now a Premium member of The Wild Book!" : "Try Wild Book's membership free for 1 month"}
             </h3>
-            <p className="lg:text-sm italic">
+            <p className="sm:text-sm italic">
               *Note - A dummy debit card will be provided for all your
               transactions on this site.
             </p>
@@ -97,7 +97,7 @@ const Plans = () => {
                   
                 ))}
           </div>}
-          <div className="lg:text-sm md:max-w-[70%] flex flex-col gap-4">
+          <div className="sm:text-sm md:max-w-[70%] flex flex-col gap-4">
             <p>
               Your Wild book membership plan will be billed in your local
               currency, using exchange rates set by Google.

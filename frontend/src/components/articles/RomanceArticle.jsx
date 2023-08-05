@@ -15,9 +15,9 @@ export const RomanceArticle = ({ data }) => {
         <div className="w-[5%] mx-auto">
           <hr />
         </div>
-        <h2 className="text-4xl">{data.title}</h2>
+        <h2 className="text-3xl">{data.title}</h2>
         <div className="flex gap-2 items-center italic mb-2">
-          <p className="lg:text-xs text-[#767676]">Posted on {data.date}</p>
+          <p className="text-sm sm:text-xs text-[#767676]">Posted on {data.date}</p>
           <span className="flex items-center justify-center">
             <FiberManualRecordIcon
               style={{ color: "#767676", fontSize: "5px" }}
@@ -27,19 +27,19 @@ export const RomanceArticle = ({ data }) => {
             by Logan Xavier
           </Link>
         </div>
-        <div className="text-left flex flex-col gap-7">
+        <div className="sm:text-sm text-left flex flex-col gap-7">
           <p>{data.mainContent[0].split(". ").slice(0, 3).join(". ") + "."}</p>
           <img src={data.articleImageUrl[0]} />
           <p>{data.mainContent[0].split(". ").slice().join(". ")}</p>
         </div>
-        <div className="text-left flex flex-col gap-7 mt-8">
+        <div className="sm:text-sm text-left flex flex-col gap-7 mt-8">
           <h3 className="font-semibold text-xl">{data.subtitle[0]}</h3>
           <p>{data.mainContent[1].split(". ").slice(0, 5).join(". ") + "."}</p>
           <img src={data.articleImageUrl[1]} />
           <p>{data.mainContent[1].split(". ").slice(5, 12).join(". ")}</p>
           <p>{data.mainContent[1].split(". ").slice().join(". ")}</p>
         </div>
-        <div className="text-left flex flex-col gap-7 mt-8">
+        <div className="sm:text-sm text-left flex flex-col gap-7 mt-8">
           <h3 className="font-semibold text-xl">{data.subtitle[1]}</h3>
           <p>{data.mainContent[1].split(". ").slice(0, 4).join(". ") + "."}</p>
           {/* <blockquote className="blockquote2 italic">
@@ -52,7 +52,7 @@ export const RomanceArticle = ({ data }) => {
           <img src={data.articleImageUrl[1]} />
           <p>{data.mainContent[1].split(". ").slice().join(". ")}</p>
         </div>
-        <div className="text-left flex flex-col gap-7 mt-8">
+        <div className="sm:text-sm text-left flex flex-col gap-7 mt-8">
           <h3 className="font-semibold text-xl">{data.subtitle[2]}</h3>
           <p>{data.mainContent[2].split(". ").slice(0, 5).join(". ") + "."}</p>
           <img src={data.articleImageUrl[2]} />

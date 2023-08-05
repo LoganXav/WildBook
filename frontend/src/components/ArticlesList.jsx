@@ -41,7 +41,7 @@ export const ArticlesList = () => {
                 {article.title}
               </h2>
             </Link>
-            <div className="flex italic items-center gap-3 mb-2 lg:text-xs">
+            <div className="flex italic items-center gap-3 mb-2 text-sm sm:text-xs">
               <p className="text-[#767676]">Posted on {article.date}</p>
               <span className="flex items-center justify-center">
                 <FiberManualRecordIcon
@@ -56,7 +56,7 @@ export const ArticlesList = () => {
                 by Logan Xavier
               </Link>
             </div>
-            <div className="lg:text-sm flex flex-col gap-8 text-left">
+            <div className="sm:text-sm flex flex-col gap-8 text-left">
               <p>
                 {article.coverContent.split(". ").slice(0, 3).join(". ") + "."}
               </p>
@@ -68,7 +68,7 @@ export const ArticlesList = () => {
             </div>
             <Link
               to={`/article/${article._id}`}
-              className="text-sm self-start italic cursor-pointer text-[#6074b5] hover:text-[#333333] my-1"
+              className="sm:text-sm self-start italic cursor-pointer text-[#6074b5] hover:text-[#333333] my-1"
             >
               Continue reading →
             </Link>
