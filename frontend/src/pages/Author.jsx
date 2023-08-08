@@ -2,10 +2,14 @@ import React from "react";
 import { Navbar } from "../components/commons/Navbar";
 import { Footer } from "../components/commons/Footer";
 import { ArticlesList } from "../components/ArticlesList";
+import { useFetchArticleCovers } from "../hooks/useFetch";
 
 const Author = () => {
-  const personalArticles = [1, 2];
+  const { data, loading, error } = useFetchArticleCovers(
+    import.meta.env.VITE_APP_API_URL + "/articles/covers"
+  );
   return (
+    
     <>
       <Navbar />
       <div className="border-b flex justify-center items-center py-16 mb-16">
@@ -19,7 +23,7 @@ const Author = () => {
           </p>
         </div>
       </div>
-      <ArticlesList articles={personalArticles} />
+      <ArticlesList data={data} loading={loading} error={error} />
       <Footer />
     </>
   );
