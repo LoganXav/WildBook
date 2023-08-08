@@ -16,7 +16,7 @@ export const RomanceArticle = ({ data }) => {
           <hr />
         </div>
         <h2 className="text-3xl">{data.title}</h2>
-        <div className="flex gap-2 items-center italic mb-2">
+        <div className="flex gap-2 items-center italic mb-2 md:text-sm">
           <p className="text-sm sm:text-xs text-[#767676]">Posted on {data.date}</p>
           <span className="flex items-center justify-center">
             <FiberManualRecordIcon
@@ -73,7 +73,7 @@ export const RomanceArticle = ({ data }) => {
       <Suggestion category={data.category} title={data.title} /> 
       <div className="w-full border-t mt-16 pt-16">
         <div className="w-[80%] md:w-[70%] mx-auto">
-          <Comment />
+          <Comment title={data.title}/>
         </div>
       </div>
     </div>

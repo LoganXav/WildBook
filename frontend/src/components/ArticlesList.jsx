@@ -9,10 +9,7 @@ import LockIcon from '@mui/icons-material/Lock';
 import { AuthContext } from "../context/authContext";
 import Skeleton from "./Skeleton"
 
-export const ArticlesList = () => {
-  const { data, loading, error } = useFetchArticleCovers(
-    import.meta.env.VITE_APP_API_URL + "/articles/covers"
-  );
+export const ArticlesList = ({ data, loading, error }) => {
  
   const { userPlan, sub } = useContext(AuthContext);
 
@@ -41,8 +38,8 @@ export const ArticlesList = () => {
                 {article.title}
               </h2>
             </Link>
-            <div className="flex italic items-center gap-3 mb-2 text-sm sm:text-xs">
-              <p className="text-[#767676]">Posted on {article.date}</p>
+            <div className="flex italic items-center gap-3 mb-2 md:text-sm">
+              <p className="text-[#767676] text-sm sm:text-xs">Posted on {article.date}</p>
               <span className="flex items-center justify-center">
                 <FiberManualRecordIcon
                   style={{ color: "#767676", fontSize: "5px" }}
