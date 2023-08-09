@@ -35,7 +35,7 @@ const Article = () => {
         </main>
       ) : data.category === "Technology" ? (
         <main className="border-b mb-16">
-          <article className="w-[80%] mx-auto py-16">
+          <article className="w-full mx-auto py-16">
             <TechArticle data={data}/>
           </article>
         </main>

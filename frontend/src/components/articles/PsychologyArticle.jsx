@@ -8,6 +8,7 @@ import { Comment } from "../Comment";
 import { Suggestion } from "../Suggestion";
 
 export const PsychologyArticle = ({ data }) => {
+  console.log(data)
   return (
     <div className="w-full">
       <div className="text-center w-[80%] md:w-[70%] mx-auto flex flex-col items-center gap-3">

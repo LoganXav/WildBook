@@ -6,6 +6,7 @@ import Plans from "./pages/Plans";
 import Author from "./pages/Author";
 import Search from "./pages/Search";
 import Article from "./pages/Article";
+import FeaturedPost from "./pages/FeaturedPost";
 
 
 function App() {
@@ -52,6 +53,10 @@ function App() {
         {
           path: "/article/:id",
           element: <Article />
+        },
+        {
+          path: "/post/:id",
+          element: <FeaturedPost />
         }
       ]
     },

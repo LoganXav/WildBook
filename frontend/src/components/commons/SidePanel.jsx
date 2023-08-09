@@ -126,21 +126,21 @@ const SidePanel = () => {
             facilis pariatur iure ullam, quisquam ipsa?
           </p>
           <div className="flex items-center gap-2">
-            <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
+            <a href="https://www.instagram.com/ssegun__" className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
               <InstagramIcon style={{ fontSize: "15px" }} />
-            </span>
-            <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
+            </a>
+            <a href="https://twitter.com/Ssegun_" className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
               <TwitterIcon style={{ fontSize: "15px" }} />
-            </span>
-            <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
+            </a>
+            <a href="" className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
               <WhatsAppIcon style={{ fontSize: "15px" }} />
-            </span>
-            <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
+            </a>
+            <a href="https://www.linkedin.com/in/logan10927" className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
               <LinkedInIcon style={{ fontSize: "15px" }} />
-            </span>
-            <span className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
+            </a>
+            <a href="https://github.com/LoganXav" className="flex items-center justify-center border border-[#9a9a9a] hover:border-[#cacaca] transition duration-200 ease rounded-full p-3 cursor-pointer">
               <GitHubIcon style={{ fontSize: "15px" }} />
-            </span>
+            </a>
           </div>
         </div>
         <p className="sm:text-xs self-center text-center">

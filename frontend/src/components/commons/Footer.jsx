@@ -47,10 +47,10 @@ export const Footer = () => {
                   src="http://nordthemes.com/wild-book-demo/wp-content/uploads/sites/14/2017/08/gian-cescon-00ByEXKcSkA-unsplash-150x150.jpg"
                 />
                 </div>
-                <div className="flex flex-col gap-2">
-                  <small className="sm:text-xs text-sm max-w-[90%]">
+                <div className="flex flex-col gap-2 cursor-pointer hover:text-[#767676] transition duration-200 ease">
+                  <Link to="/post/1" className="sm:text-xs text-sm max-w-[90%]">
                     Lorem consectetur adipisicing elit Lorem, ipsum.
-                  </small>
+                  </Link>
                   <small className="font-extralight text-[11px]">August 8, 2019</small>
                 </div>
               </div>
