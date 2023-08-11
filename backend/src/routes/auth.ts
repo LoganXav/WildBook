@@ -39,9 +39,7 @@ router.post(
         );
 
         const newUser = await User.create({ ...req.body, password: hash, customerStripeId: customer.id });
-        const token = jwt.sign({ email: newUser.email }, process.env.JWT as string, {
-          expiresIn: 360000,
-        });
+        const token = jwt.sign({ email: newUser.email }, process.env.JWT as string);
         const { password, ...data } = newUser.toObject();
 
         res

@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const posts = [1, 2, 3];
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSignUpClick = () => {
+    setUsername('');
+    setEmail('');
+  };
   return (
     <footer className="">
       <section className="flex justify-center items-center border-b pb-16">
@@ -12,9 +27,9 @@ export const Footer = () => {
           Subscribe to our email newsletter for a weekly look at the top stories in travel, design and photography.
           </p>
           <div className="flex flex-col md:flex-row gap-2 md:gap-1 w-full md:w-[90%]">
-            <input type="text" className="w-full text-[14px] border py-[10px] px-2 outline-none bg-[#f6f6f6] focus-within:bg-white transition duration-200 ease" placeholder="Your name" />
-            <input type="text" className="w-full text-[14px] border py-[10px] px-2 outline-none bg-[#f6f6f6] focus-within:bg-white transition duration-200 ease" placeholder="Your email address" />
-            <button className="md:w-[50%] w-full text-[14px] border-none bg-[#edb48b] text-white px-2 py-[10px] cursor-pointer outline-none">SIGN UP</button>
+            <input onChange={handleUsernameChange} type="text" value={username} className="w-full text-[14px] border py-[10px] px-2 outline-none bg-[#f6f6f6] focus-within:bg-white transition duration-200 ease" placeholder="Your name" />
+            <input onChange={handleEmailChange} type="text" value={email} className="w-full text-[14px] border py-[10px] px-2 outline-none bg-[#f6f6f6] focus-within:bg-white transition duration-200 ease" placeholder="Your email address" />
+            <button onClick={handleSignUpClick} className="md:w-[50%] w-full text-[14px] border-none bg-[#edb48b] text-white px-2 py-[10px] cursor-pointer outline-none">SIGN UP</button>
           </div>
         </div>
       </section>

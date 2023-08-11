@@ -4,11 +4,12 @@ import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import ShareIcon from "@mui/icons-material/Share";
 import { Comment } from "../Comment";
 import { Suggestion } from "../Suggestion";
 
 export const PsychologyArticle = ({ data }) => {
-  console.log(data)
+  console.log(data);
   return (
     <div className="w-full">
       <div className="text-center w-[80%] md:w-[70%] mx-auto flex flex-col items-center gap-3">
@@ -18,7 +19,9 @@ export const PsychologyArticle = ({ data }) => {
         </div>
         <h2 className="text-3xl">{data.title}</h2>
         <div className="flex gap-2 items-center md:text-sm italic mb-2">
-          <p className="text-sm sm:text-xs text-[#767676]">Posted on {data.date}</p>
+          <p className="text-sm sm:text-xs text-[#767676]">
+            Posted on {data.date}
+          </p>
           <span className="flex items-center justify-center">
             <FiberManualRecordIcon
               style={{ color: "#767676", fontSize: "5px" }}
@@ -64,6 +67,9 @@ export const PsychologyArticle = ({ data }) => {
           </blockquote> */}
 
         <div className="flex text-[#333333] self-start mt-8 gap-2 items-center">
+          <span className="flex items-center justify-center p-1">
+            <ShareIcon style={{ fontSize: "15px" }} />
+          </span>
           <span className="flex items-center justify-center bg-[#ececec] hover:text-[#fff] hover:bg-[#d83860] transition duration-200 ease rounded-full p-3 cursor-pointer ">
             <InstagramIcon style={{ fontSize: "15px" }} />
           </span>
@@ -78,7 +84,7 @@ export const PsychologyArticle = ({ data }) => {
       <Suggestion category={data.category} title={data.title} />
       <div className="w-full border-t mt-16 pt-16">
         <div className="w-[80%] md:w-[70%] mx-auto">
-          <Comment title={data.title}/>
+          <Comment title={data.title} />
         </div>
       </div>
     </div>

@@ -23,11 +23,15 @@ p, small{
     content: '\201c';
     top: -20px;
     left: 50%;
+    color: rgb(109, 109, 109);
+
 }
 .blockquote::after {
     content: '\201d';
-    bottom: -20px;
+    bottom: -40px;
     left: 50%;
+    color: rgb(109, 109, 109);
+
 }
 .blockquote::before,
 .blockquote::after {
