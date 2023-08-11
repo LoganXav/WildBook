@@ -23,7 +23,7 @@ const FeaturedPost = () => {
           <div className="w-[5%] mx-auto">
             <hr />
           </div>
-          <h2 className="text-3xl">{data.title}</h2>
+          <h2 className="text-4xl sm:text-3xl">{data.title}</h2>
           <div className="flex gap-2 items-center md:text-sm italic mb-2">
             <p className="text-sm sm:text-xs text-[#767676]">Posted on August 8, 2019</p>
             <span className="flex items-center justify-center">
@@ -39,7 +39,7 @@ const FeaturedPost = () => {
             <p>{data.desc}</p>
           </div>
 
-          <div className="grid grid-cols-2 grid-rows-3 gap-2 w-[90%] max-h-[40rem] mt-10">
+          <div className="grid grid-cols-2 grid-rows-3 gap-2 w-[90%] max-h-[30rem] sm:max-h-[40rem] mt-10">
             <div className="w-ful h-full row-span-2">
             <img
               src="http://0.gravatar.com/avatar/f44e7d18176511aed07496128445e855?s=150&d=mm&r=g"
