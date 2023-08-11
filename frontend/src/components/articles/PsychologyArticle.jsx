@@ -17,7 +17,7 @@ export const PsychologyArticle = ({ data }) => {
         <div className="w-[5%] mx-auto">
           <hr />
         </div>
-        <h2 className="text-3xl">{data.title}</h2>
+        <h2 className="text-4xl sm:text-3xl">{data.title}</h2>
         <div className="flex gap-2 items-center md:text-sm italic mb-2">
           <p className="text-sm sm:text-xs text-[#767676]">
             Posted on {data.date}

@@ -39,7 +39,7 @@ const FeaturedPost = () => {
             <p>{data.desc}</p>
           </div>
 
-          <div className="grid grid-cols-2 grid-rows-3 gap-2 w-[90%] max-h-[30rem] sm:max-h-[40rem] mt-10">
+          <div className="grid grid-cols-2 grid-rows-3 gap-2 w-[90%] max-h-[30rem] mt-10">
             <div className="w-ful h-full row-span-2">
             <img
               src="http://0.gravatar.com/avatar/f44e7d18176511aed07496128445e855?s=150&d=mm&r=g"

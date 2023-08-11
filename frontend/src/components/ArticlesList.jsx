@@ -38,7 +38,7 @@ export const ArticlesList = ({ data, loading, error }) => {
                 <hr />
               </div>
               <Link to={`/article/${article._id}`}>
-                <h2 className="text-3xl hover:text-[#767676] transition duration-200 ease">
+                <h2 className="text-4xl sm:text-3xl hover:text-[#767676] transition duration-200 ease">
                   {article.title}
                 </h2>
               </Link>

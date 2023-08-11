@@ -17,7 +17,7 @@ const Author = () => {
             className="rounded-full"
             src="http://0.gravatar.com/avatar/f44e7d18176511aed07496128445e855?s=150&d=mm&r=g"
           />
-          <h2 className="font-semibold text-xl">Logan Xavier</h2>
+          <h2 className="font-semibold text-2xl sm:text-xl">Logan Xavier</h2>
           <p className="sm:text-sm">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam
             expedita fugit eius necessitatibus dolor debitis nulla vel et, quia
