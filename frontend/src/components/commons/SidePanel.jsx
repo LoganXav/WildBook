@@ -210,9 +210,10 @@ const SidePanel = () => {
               <div className="flex gap-3 w-full justify-between">
                 <button
                   onClick={handleRegister}
-                  className=" border border-[#909090] w-[5rem] px-2 py-1 text-[12px] hover:border-[#e3e3e3] transition duration-200 ease"
+                  className=" border border-[#909090] w-[5rem] px-2 py-1 text-[12px] hover:border-[#e3e3e3] transition duration-200 ease disabled:opacity-20 outline-none"
+                  disabled={loading}
                 >
-                  {loading ? "..." : "REGISTER"}
+                  REGISTER
                 </button>
                 <small className="text-[#909090] text-[12px]">
                   {errorMessage}
@@ -238,9 +239,10 @@ const SidePanel = () => {
               <div className="flex gap-3 w-full justify-between">
                 <button
                   onClick={handleLogin}
-                  className="border border-[#909090] w-[5rem] px-2 py-1 text-[12px] hover:border-[#e3e3e3] transition duration-200 ease"
+                  className="border border-[#909090] w-[5rem] px-2 py-1 text-[12px] hover:border-[#e3e3e3] transition duration-200 ease disabled:opacity-20 outline-none"
+                  disabled={loading}
                 >
-                  {loading ? "..." : "LOGIN"}
+                  LOGIN
                 </button>
                 <small className="text-[#909090] text-[12px]">
                   {errorMessage2}

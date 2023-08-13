@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
+import { createBrowserRouter, RouterProvider, Outlet, useParams } from "react-router-dom"
 import SidePanel from "./components/commons/SidePanel";
 import HomePage from "./pages/HomePage";
 import Contact from "./pages/Contact";
@@ -10,7 +10,10 @@ import FeaturedPost from "./pages/FeaturedPost";
 
 
 function App() {
-  const Layout = () => {                         
+  const Layout = () => {     
+    const url  = useParams()  
+    console.log(url)                  
+    console.log(window.document.location.pathname)                  
     return(
             <div className="flex flex-col lg:flex-row w-full">
               <div className="lg:flex-[2] lg:sticky top-0 z-20 lg:h-screen bg-homePanel bg-no-repeat bg-center bg-cover">
